@@ -43,7 +43,7 @@ fi
 : ${CACHE_INFO:=""}
 
 if [ "$CACHE_TYPE" = "memcached" ]; then
-    : ${MEMCACHE_SERVER_ADDR:=${MEMCACHE_PORT_11211_TCP_ADDR:-localhost}} # Default to internal memcache
+    : ${MEMCACHE_SERVER_ADDR:=memcache}
     : ${MEMCACHE_SERVER_PORT:=${MEMCACHE_PORT_11211_TCP_PORT:-11211}}
     : ${CACHE_INFO:="$MEMCACHE_SERVER_ADDR:$MEMCACHE_SERVER_PORT"}
 fi
